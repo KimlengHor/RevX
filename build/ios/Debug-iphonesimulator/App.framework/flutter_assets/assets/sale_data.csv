@@ -1,0 +1,182 @@
+﻿Date,Time Range,Sale,City,State
+2023/1/1,Morning,50,College Station,TX
+2023/1/2,Noon,75,College Station,TX
+2023/1/3,Afternoon,60,College Station,TX
+2023/1/4,Midnight,30,College Station,TX
+2023/1/5,Morning,45,College Station,TX
+2023/1/6,Noon,70,College Station,TX
+2023/1/7,Afternoon,55,College Station,TX
+2023/1/8,Midnight,35,College Station,TX
+2023/1/9,Morning,55,College Station,TX
+2023/1/10,Noon,80,College Station,TX
+2023/1/11,Afternoon,65,College Station,TX
+2023/1/12,Midnight,40,College Station,TX
+2023/1/13,Morning,60,College Station,TX
+2023/1/14,Noon,90,College Station,TX
+2023/1/15,Afternoon,50,College Station,TX
+2023/1/16,Midnight,75,College Station,TX
+2023/1/17,Morning,60,Austin,TX
+2023/1/18,Noon,55,Austin,TX
+2023/1/19,Afternoon,35,Austin,TX
+2023/1/20,Midnight,55,Austin,TX
+2023/1/21,Morning,80,College Station,TX
+2023/1/22,Noon,65,College Station,TX
+2023/1/23,Afternoon,40,College Station,TX
+2023/1/24,Midnight,60,Austin,TX
+2023/1/25,Morning,90,Austin,TX
+2023/1/26,Noon,55,Austin,TX
+2023/1/27,Afternoon,80,Austin,TX
+2023/1/28,Midnight,65,College Station,TX
+2023/1/29,Morning,40,College Station,TX
+2023/1/30,Morning,60,College Station,TX
+2023/1/31,Noon,90,College Station,TX
+2023/2/1,Afternoon,70,College Station,TX
+2023/2/2,Midnight,45,Austin,TX
+2023/2/3,Morning,55,Austin,TX
+2023/2/4,Noon,85,Austin,TX
+2023/2/5,Afternoon,75,Austin,TX
+2023/2/6,Midnight,50,Houston,TX
+2023/2/7,Morning,85,Houston,TX
+2023/2/8,Noon,75,Houston,TX
+2023/2/9,Afternoon,50,College Station,TX
+2023/2/10,Midnight,85,Houston,TX
+2023/2/11,Morning,75,Houston,TX
+2023/2/12,Noon,50,Houston,TX
+2023/2/13,Afternoon,85,College Station,TX
+2023/2/14,Morning,75,Houston,TX
+2023/2/15,Noon,50,Houston,TX
+2023/2/16,Afternoon,45,Houston,TX
+2023/2/17,Midnight,55,Houston,TX
+2023/2/18,Morning,85,Houston,TX
+2023/2/19,Noon,75,Houston,TX
+2023/2/20,Morning,45,Austin,TX
+2023/2/21,Noon,45,Houston,TX
+2023/2/22,Afternoon,45,College Station,TX
+2023/2/23,Midnight,55,Houston,TX
+2023/2/24,Morning,45,Houston,TX
+2023/2/25,Noon,55,Houston,TX
+2023/2/26,Afternoon,85,Houston,TX
+2023/2/27,Midnight,75,Houston,TX
+2023/2/28,Morning,45,Austin,TX
+2023/3/1,Noon,55,Austin,TX
+2023/3/2,Afternoon,85,Austin,TX
+2023/3/3,Midnight,75,College Station,TX
+2023/3/4,Morning,50,College Station,TX
+2023/3/5,Morning,85,College Station,TX
+2023/3/6,Noon,75,College Station,TX
+2023/3/7,Afternoon,50,College Station,TX
+2023/3/8,Morning,45,Austin,TX
+2023/3/9,Morning,55,Austin,TX
+2023/3/10,Noon,85,Austin,TX
+2023/3/11,Afternoon,75,Austin,TX
+2023/3/12,Midnight,50,Houston,TX
+2023/3/13,Morning,85,Houston,TX
+2023/3/14,Noon,75,Houston,TX
+2023/3/15,Afternoon,45,Houston,TX
+2023/3/16,Midnight,55,Houston,TX
+2023/3/17,Morning,85,Houston,TX
+2023/3/18,Noon,75,Houston,TX
+2023/3/19,Afternoon,50,Houston,TX
+2023/3/20,Midnight,85,Houston,TX
+2023/3/21,Morning,75,Houston,TX
+2023/3/22,Morning,50,Austin,TX
+2023/3/23,Noon,45,Austin,TX
+2023/3/24,Afternoon,55,Austin,TX
+2023/3/25,Midnight,85,College Station,TX
+2023/3/26,Morning,75,College Station,TX
+2023/3/27,Noon,50,College Station,TX
+2023/3/28,Afternoon,85,College Station,TX
+2023/3/29,Midnight,75,College Station,TX
+2023/3/30,Morning,50,Austin,TX
+2023/3/31,Morning,85,Austin,TX
+2023/4/1,Noon,45,Austin,TX
+2023/4/2,Afternoon,55,Austin,TX
+2023/4/3,Midnight,85,Austin,TX
+2023/4/4,Morning,75,Austin,TX
+2023/4/5,Noon,50,College Station,TX
+2023/4/6,Afternoon,85,College Station,TX
+2023/4/7,Midnight,85,College Station,TX
+2023/4/8,Morning,75,College Station,TX
+2023/4/9,Noon,50,College Station,TX
+2023/4/10,Afternoon,85,College Station,TX
+2023/4/11,Midnight,45,Austin,TX
+2023/4/12,Morning,55,Austin,TX
+2023/4/13,Noon,85,Austin,TX
+2023/4/14,Afternoon,75,Houston,TX
+2023/4/15,Midnight,50,Houston,TX
+2023/4/16,Morning,85,Austin,TX
+2023/4/17,Noon,75,Austin,TX
+2023/4/18,Afternoon,50,Austin,TX
+2023/4/19,Midnight,85,College Station,TX
+2023/4/20,Morning,45,College Station,TX
+2023/4/21,Noon,85,College Station,TX
+2023/4/22,Afternoon,75,College Station,TX
+2023/4/23,Midnight,50,College Station,TX
+2023/4/24,Morning,85,College Station,TX
+2023/4/25,Morning,45,Austin,TX
+2023/4/26,Morning,55,Austin,TX
+2023/4/27,Noon,85,Austin,TX
+2023/4/28,Afternoon,75,Houston,TX
+2023/4/29,Morning,85,Houston,TX
+2023/4/30,Noon,75,Houston,TX
+2023/5/1,Afternoon,50,Austin,TX
+2023/5/2,Midnight,85,Austin,TX
+2023/5/3,Morning,45,Austin,TX
+2023/5/4,Noon,55,College Station,TX
+2023/5/5,Afternoon,85,College Station,TX
+2023/5/6,Midnight,75,College Station,TX
+2023/5/7,Morning,50,College Station,TX
+2023/5/8,Noon,85,College Station,TX
+2023/5/9,Afternoon,75,Austin,TX
+2023/5/10,Midnight,50,Austin,TX
+2023/5/11,Morning,85,Austin,TX
+2023/5/12,Noon,45,Austin,TX
+2023/5/13,Afternoon,85,Houston,TX
+2023/5/14,Midnight,75,Houston,TX
+2023/5/15,Morning,50,Austin,TX
+2023/5/16,Morning,85,Austin,TX
+2023/5/17,Noon,45,Austin,TX
+2023/5/18,Afternoon,55,College Station,TX
+2023/5/19,Morning,85,College Station,TX
+2023/5/20,Noon,75,College Station,TX
+2023/5/21,Morning,50,College Station,TX
+2023/5/22,Noon,85,College Station,TX
+2023/5/23,Afternoon,45,Austin,TX
+2023/5/24,Midnight,85,Austin,TX
+2023/5/25,Morning,45,Austin,TX
+2023/5/26,Noon,55,Austin,TX
+2023/5/27,Afternoon,85,Houston,TX
+2023/5/28,Midnight,45,Houston,TX
+2023/5/29,Morning,55,Austin,TX
+2023/5/30,Noon,85,Austin,TX
+2023/5/31,Afternoon,75,Austin,TX
+2023/6/1,Morning,50,College Station,TX
+2023/6/2,Noon,85,College Station,TX
+2023/6/3,Afternoon,75,College Station,TX
+2023/6/4,Midnight,50,College Station,TX
+2023/6/5,Morning,85,College Station,TX
+2023/6/6,Noon,45,Austin,TX
+2023/6/7,Afternoon,55,Austin,TX
+2023/6/8,Midnight,85,Austin,TX
+2023/6/9,Morning,75,Austin,TX
+2023/6/10,Noon,50,Houston,TX
+2023/6/11,Afternoon,85,Houston,TX
+2023/6/12,Midnight,75,Houston,TX
+2023/6/13,Morning,50,Houston,TX
+2023/6/14,Noon,85,Austin,TX
+2023/6/15,Afternoon,45,Austin,TX
+2023/6/16,Midnight,55,Austin,TX
+2023/6/17,Morning,85,College Station,TX
+2023/6/18,Noon,75,College Station,TX
+2023/6/19,Afternoon,50,College Station,TX
+2023/6/20,Midnight,85,College Station,TX
+2023/6/21,Morning,45,College Station,TX
+2023/6/22,Noon,55,Austin,TX
+2023/6/23,Afternoon,85,Austin,TX
+2023/6/24,Midnight,75,Austin,TX
+2023/6/25,Morning,50,Austin,TX
+2023/6/26,Noon,85,Houston,TX
+2023/6/27,Afternoon,75,Houston,TX
+2023/6/28,Midnight,50,Houston,TX
+2023/6/29,Morning,85,Houston,TX
+2023/6/30,Noon,45,Houston,TX
