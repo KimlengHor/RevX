@@ -85,177 +85,203 @@ class _SalesScreenState extends State<SalesScreen> {
   }
 
   void _setupChartData() {
-      if (_isWeekly) {
-        _chartData = _salesByCollegeStationWeek.entries.expand((entry) {
-          if (_filterByWeek.isNotEmpty) {
-            if (!_filterByWeek.contains(entry.key)) {
-              return [];
-            }
-          }
-          String week = entry.key;
-          List<Sale> salesInWeek = entry.value;
-          int totalSale = 0;
-
-          if (_timeOfTheDay == 'All') {
-            totalSale = salesInWeek.fold(
-                0, (prev, curr) => prev + int.parse(curr.sale));
-          } else {
-            for (var sale in salesInWeek) {
-              if (_timeOfTheDay == sale.time) {
-                totalSale += int.parse(sale.sale);
-              }
-            }
-          }
-
-          return [ChartSampleData(
-              x: week, // Combine date and time, modify as needed
-              y: totalSale, // Use the sale amount as y value, modify as needed
-            )
-          ];
-        }).cast<ChartSampleData>().toList();
-        _chartData?.addAll(_salesByHoustonWeek.entries.expand((entry) {
-          if (_filterByWeek.isNotEmpty) {
-            if (!_filterByWeek.contains(entry.key)) {
-              return [];
-            }
-          }
-          String week = entry.key;
-          List<Sale> salesInWeek = entry.value;
-          int totalSale = 0;
-
-          if (_timeOfTheDay == 'All') {
-            totalSale = salesInWeek.fold(
-                0, (prev, curr) => prev + int.parse(curr.sale));
-          } else {
-            for (var sale in salesInWeek) {
-              if (_timeOfTheDay == sale.time) {
-                totalSale += int.parse(sale.sale);
-              }
-            }
-          }
-
-          // return salesInWeek.map((sale) {
-          return [ChartSampleData(
-            x: week, // Combine date and time, modify as needed
-            yValue: totalSale, // Use the sale amount as y value, modify as needed
-            // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
-          )
-          ];
-          // });
-        }).cast<ChartSampleData>().toList());
-        _chartData?.addAll(_salesByAustinWeek.entries.expand((entry) {
-          if (_filterByWeek.isNotEmpty) {
-            if (!_filterByWeek.contains(entry.key)) {
+    _totalSales = 0;
+    if (_isWeekly) {
+      _chartData = _salesByCollegeStationWeek.entries.expand((entry) {
+        if (_filterByWeek.isNotEmpty) {
+          if (!_filterByWeek.contains(entry.key)) {
             return [];
+          }
+        }
+        String week = entry.key;
+        List<Sale> salesInWeek = entry.value;
+        int totalSale = 0;
+
+        if (_timeOfTheDay == 'All') {
+          totalSale = salesInWeek.fold(
+              0, (prev, curr) => prev + int.parse(curr.sale));
+        } else {
+          for (var sale in salesInWeek) {
+            if (_timeOfTheDay == sale.time) {
+              totalSale += int.parse(sale.sale);
             }
           }
-          String week = entry.key;
-          List<Sale> salesInWeek = entry.value;
-          int totalSale = 0;
+        }
 
-          if (_timeOfTheDay == 'All') {
-            totalSale = salesInWeek.fold(
-                0, (prev, curr) => prev + int.parse(curr.sale));
-          } else {
-            for (var sale in salesInWeek) {
-              if (_timeOfTheDay == sale.time) {
-                totalSale += int.parse(sale.sale);
-              }
-            }
-          }
+        setState(() {
+          _totalSales += totalSale;
+        });
 
-          return [ChartSampleData(
+        return [ChartSampleData(
             x: week, // Combine date and time, modify as needed
-            secondSeriesYValue: totalSale, // Use the sale amount as y value, modify as needed
-            // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
-          )
-          ];
-        }).cast<ChartSampleData>().toList());
-      } else {
-        _chartData = _salesByCollegeStationMonth.entries.expand((entry) {
-          if (_filterByMonth.isNotEmpty) {
-            if (!_filterByMonth.contains(entry.key)) {
-              return [];
-            }
-          }
-          String month = entry.key;
-          List<Sale> salesInWeek = entry.value;
-          int totalSale = 0;
-
-          if (_timeOfTheDay == 'All') {
-            totalSale = salesInWeek.fold(
-                0, (prev, curr) => prev + int.parse(curr.sale));
-          } else {
-            for (var sale in salesInWeek) {
-              if (_timeOfTheDay == sale.time) {
-                totalSale += int.parse(sale.sale);
-              }
-            }
-          }
-          return [ChartSampleData(
-            x: month, // Combine date and time, modify as needed
             y: totalSale, // Use the sale amount as y value, modify as needed
-            // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
           )
-          ];
-        }).cast<ChartSampleData>().toList();
-        _chartData?.addAll(_salesByHoustonMonth.entries.expand((entry) {
-          if (_filterByMonth.isNotEmpty) {
-            if (!_filterByMonth.contains(entry.key)) {
-              return [];
+        ];
+      }).cast<ChartSampleData>().toList();
+      _chartData?.addAll(_salesByHoustonWeek.entries.expand((entry) {
+        if (_filterByWeek.isNotEmpty) {
+          if (!_filterByWeek.contains(entry.key)) {
+            return [];
+          }
+        }
+        String week = entry.key;
+        List<Sale> salesInWeek = entry.value;
+        int totalSale = 0;
+
+        if (_timeOfTheDay == 'All') {
+          totalSale = salesInWeek.fold(
+              0, (prev, curr) => prev + int.parse(curr.sale));
+        } else {
+          for (var sale in salesInWeek) {
+            if (_timeOfTheDay == sale.time) {
+              totalSale += int.parse(sale.sale);
             }
           }
-          String month = entry.key;
-          List<Sale> salesInWeek = entry.value;
-          int totalSale = 0;
+        }
 
-          if (_timeOfTheDay == 'All') {
-            totalSale = salesInWeek.fold(
-                0, (prev, curr) => prev + int.parse(curr.sale));
-          } else {
-            for (var sale in salesInWeek) {
-              if (_timeOfTheDay == sale.time) {
-                totalSale += int.parse(sale.sale);
-              }
+        setState(() {
+          _totalSales += totalSale;
+        });
+
+        // return salesInWeek.map((sale) {
+        return [ChartSampleData(
+          x: week, // Combine date and time, modify as needed
+          yValue: totalSale, // Use the sale amount as y value, modify as needed
+          // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
+        )
+        ];
+        // });
+      }).cast<ChartSampleData>().toList());
+      _chartData?.addAll(_salesByAustinWeek.entries.expand((entry) {
+        if (_filterByWeek.isNotEmpty) {
+          if (!_filterByWeek.contains(entry.key)) {
+          return [];
+          }
+        }
+        String week = entry.key;
+        List<Sale> salesInWeek = entry.value;
+        int totalSale = 0;
+
+        if (_timeOfTheDay == 'All') {
+          totalSale = salesInWeek.fold(
+              0, (prev, curr) => prev + int.parse(curr.sale));
+        } else {
+          for (var sale in salesInWeek) {
+            if (_timeOfTheDay == sale.time) {
+              totalSale += int.parse(sale.sale);
             }
           }
+        }
 
-          return [ChartSampleData(
-            x: month, // Combine date and time, modify as needed
-            yValue: totalSale, // Use the sale amount as y value, modify as needed
-            // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
-          )
-          ];
-        }).cast<ChartSampleData>().toList());
-        _chartData?.addAll(_salesByAustinMonth.entries.expand((entry) {
-          if (_filterByMonth.isNotEmpty) {
-            if (!_filterByMonth.contains(entry.key)) {
-              return [];
+        setState(() {
+          _totalSales += totalSale;
+        });
+
+        return [ChartSampleData(
+          x: week, // Combine date and time, modify as needed
+          secondSeriesYValue: totalSale, // Use the sale amount as y value, modify as needed
+          // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
+        )
+        ];
+      }).cast<ChartSampleData>().toList());
+    } else {
+      _chartData = _salesByCollegeStationMonth.entries.expand((entry) {
+        if (_filterByMonth.isNotEmpty) {
+          if (!_filterByMonth.contains(entry.key)) {
+            return [];
+          }
+        }
+        String month = entry.key;
+        List<Sale> salesInWeek = entry.value;
+        int totalSale = 0;
+
+        if (_timeOfTheDay == 'All') {
+          totalSale = salesInWeek.fold(
+              0, (prev, curr) => prev + int.parse(curr.sale));
+        } else {
+          for (var sale in salesInWeek) {
+            if (_timeOfTheDay == sale.time) {
+              totalSale += int.parse(sale.sale);
             }
           }
-          String month = entry.key;
-          List<Sale> salesInWeek = entry.value;
-          int totalSale = 0;
+        }
 
-          if (_timeOfTheDay == 'All') {
-            totalSale = salesInWeek.fold(
-                0, (prev, curr) => prev + int.parse(curr.sale));
-          } else {
-            for (var sale in salesInWeek) {
-              if (_timeOfTheDay == sale.time) {
-                totalSale += int.parse(sale.sale);
-              }
+        setState(() {
+          _totalSales += totalSale;
+        });
+
+        return [ChartSampleData(
+          x: month, // Combine date and time, modify as needed
+          y: totalSale, // Use the sale amount as y value, modify as needed
+          // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
+        )
+        ];
+      }).cast<ChartSampleData>().toList();
+      _chartData?.addAll(_salesByHoustonMonth.entries.expand((entry) {
+        if (_filterByMonth.isNotEmpty) {
+          if (!_filterByMonth.contains(entry.key)) {
+            return [];
+          }
+        }
+        String month = entry.key;
+        List<Sale> salesInWeek = entry.value;
+        int totalSale = 0;
+
+        if (_timeOfTheDay == 'All') {
+          totalSale = salesInWeek.fold(
+              0, (prev, curr) => prev + int.parse(curr.sale));
+        } else {
+          for (var sale in salesInWeek) {
+            if (_timeOfTheDay == sale.time) {
+              totalSale += int.parse(sale.sale);
             }
           }
+        }
 
-          return [ChartSampleData(
-            x: month, // Combine date and time, modify as needed
-            secondSeriesYValue: totalSale, // Use the sale amount as y value, modify as needed
-            // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
-          )
-          ];
-        }).cast<ChartSampleData>().toList());
-      }
+        setState(() {
+          _totalSales += totalSale;
+        });
+
+        return [ChartSampleData(
+          x: month, // Combine date and time, modify as needed
+          yValue: totalSale, // Use the sale amount as y value, modify as needed
+          // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
+        )
+        ];
+      }).cast<ChartSampleData>().toList());
+      _chartData?.addAll(_salesByAustinMonth.entries.expand((entry) {
+        if (_filterByMonth.isNotEmpty) {
+          if (!_filterByMonth.contains(entry.key)) {
+            return [];
+          }
+        }
+        String month = entry.key;
+        List<Sale> salesInWeek = entry.value;
+        int totalSale = 0;
+
+        if (_timeOfTheDay == 'All') {
+          totalSale = salesInWeek.fold(
+              0, (prev, curr) => prev + int.parse(curr.sale));
+        } else {
+          for (var sale in salesInWeek) {
+            if (_timeOfTheDay == sale.time) {
+              totalSale += int.parse(sale.sale);
+            }
+          }
+        }
+
+        setState(() {
+          _totalSales += totalSale;
+        });
+
+        return [ChartSampleData(
+          x: month, // Combine date and time, modify as needed
+          secondSeriesYValue: totalSale, // Use the sale amount as y value, modify as needed
+          // If you have secondSeriesYValue and thirdSeriesYValue, add them here similarly
+        )
+        ];
+      }).cast<ChartSampleData>().toList());
+    }
 
     setState(() {
       _lines = _getStackedLineSeries();
@@ -330,21 +356,24 @@ class _SalesScreenState extends State<SalesScreen> {
     Map<String, List<Sale>> salesByMonth = {};
 
     for (var sale in sales) {
-      String dateStr = sale.date;
-      List<String> parts = dateStr.split('/'); // Split the date string
-      int year = int.parse(parts[0]);
-      int month = int.parse(parts[1]);
-      int day = int.parse(parts[2]);
+      if (city == sale.city) {
+        String dateStr = sale.date;
+        List<String> parts = dateStr.split('/'); // Split the date string
+        int year = int.parse(parts[0]);
+        int month = int.parse(parts[1]);
+        int day = int.parse(parts[2]);
 
-      DateTime saleDate = DateTime(year, month, day); // Convert string date to DateTime object
-      String saleMonth = _getMonthName(saleDate.month); // Get month name
-      String key = saleMonth; // Create a key for the month and year
+        DateTime saleDate = DateTime(
+            year, month, day); // Convert string date to DateTime object
+        String saleMonth = _getMonthName(saleDate.month); // Get month name
+        String key = saleMonth; // Create a key for the month and year
 
-      if (!salesByMonth.containsKey(key)) {
-        salesByMonth[key] = [];
+        if (!salesByMonth.containsKey(key)) {
+          salesByMonth[key] = [];
+        }
+
+        salesByMonth[key]!.add(sale);
       }
-
-      salesByMonth[key]!.add(sale);
     }
 
     return salesByMonth;
